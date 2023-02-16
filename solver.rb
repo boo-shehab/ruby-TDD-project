@@ -1,23 +1,23 @@
 class Solver
-    def factorial(n)
-        return n unless n <= 1
+  def factorial(number)
+    return number unless number <= 1
 
-        n * factorial(n-1)
-    end
+    number * factorial(number - 1)
+  end
 
-    def reverse(word)
-        word.reverse
-    end
+  def reverse(word)
+    word.reverse
+  end
 
-    def fizzbuzz (n)
-        if n % 5 == 0 && n % 3 == 0
-            'fizzbuzz'
-        elsif n % 5 == 0
-            'buzz'
-        elsif n % 3 == 0
-            'fizz'
-        else
-            n.to_s
-        end
+  def fizzbuzz(number)
+    if (number % 5).zero? && (number % 3).zero?
+      'fizzbuzz'
+    elsif (number % 5).zero?
+      'buzz'
+    elsif (number % 3).zero?
+      'fizz'
+    else
+      number.to_s
     end
+  end
 end
