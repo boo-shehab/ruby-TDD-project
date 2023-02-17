@@ -14,9 +14,9 @@ describe Solver do
     @solver.reverse('hello').should eql? 'olleh'
   end
   it 'test factorial method' do
-    @solver.fizzbuzz(20).should eql? 'fizzbuzz'
-    @solver.fizzbuzz(10).should eql? 'buzz'
-    @solver.fizzbuzz(6).should eql? 'fizz'
-    @solver.fizzbuzz(7).should eql? '7'
+    expect(@solver.fizzbuzz(3)).to eql('fizz') # N is divisible by 3
+    expect(@solver.fizzbuzz(5)).to eql('buzz') # N is divisible by 5
+    expect(@solver.fizzbuzz(15)).to eql('fizzbuzz') # N is divisible by 3 and 5
+    expect(@solver.fizzbuzz(7)).to eql('7') # N is not divisible by 3 or 5
   end
 end
